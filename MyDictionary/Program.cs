@@ -12,8 +12,16 @@ namespace MyDictionary
         {
             using (MyDictionaryContext db = new MyDictionaryContext())
             {
-                Dictionary word1 = new Dictionary { RussianWord="солнце", EnglishWord= "sun" };
-                Dictionary word2 = new Dictionary { RussianWord = "море", EnglishWord = "sea" };
+                var word1 = new Dictionary 
+                { 
+                    RussianWord="солнце", 
+                    EnglishWord= "sun"
+                };
+                var word2 = new Dictionary 
+                {
+                    RussianWord = "море",
+                    EnglishWord = "sea" 
+                };
                 db.Dictionaries.Add(word1);
                 db.Dictionaries.Add(word2);
                 db.SaveChanges();
